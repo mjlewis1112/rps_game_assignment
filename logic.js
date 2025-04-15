@@ -1,24 +1,24 @@
 // called by body onload, sets initial image for opponent
 function initPick() {
-    let init = "img/";
+    let init = "img/question.svg";
     document.getElementById('oppResult').src = init;
 }
 // called by onclick when rock button is clicked
 function rockPick() {
     // generates a random pick for opponent
     function genPick() { 
-        let pick = "img/";
+        let pick = "img/question.svg";
         if (Math.floor(Math.random() * 3) == 2) {
-            pick = "img/";
+            pick = "img/rock.svg";
         } else if (Math.floor(Math.random() * 3) == 1) {
-            pick = "img/";
+            pick = "img/paper.svg";
         } else {
-            pick = "img/";
+            pick = "img/scissors.svg";
         }
         // comparison logic
         if (pick == "img/rock.svg") {
             document.getElementById('result').innerHTML = "It's a Tie";
-        } else if (pick == "img/") {
+        } else if (pick == "img/paper.svg") {
             document.getElementById('result').innerHTML = "You Lose";
         } else {
             document.getElementById('result').innerHTML = "You Win!";
@@ -31,13 +31,13 @@ function rockPick() {
 function paperPick() {
     // generates a random pick for opponent
     function genPick () {
-        let pick = "img/";
+        let pick = "img/question.svg";
         if (Math.floor(Math.random() * 3) == 2) {
-            pick = "img/";
+            pick = "img/rock.svg";
         } else if (Math.floor(Math.random() * 3) == 1) {
-            pick = "img/";
+            pick = "img/paper.svg";
         } else {
-            pick = "img/";
+            pick = "img/scissors.svg";
         }
         // sets the opponent's image for the generated pick
         document.getElementById('oppResult').src = pick;
@@ -59,18 +59,18 @@ function scissorsPick() {
     function genPick() {
         let pick = "img/";
         if (Math.floor(Math.random() * 3) == 2) {
-            pick = "img/";
+            pick = "img/question.svg";
         } else if (Math.floor(Math.random() * 3) == 1) {
-            pick = "img/";
+            pick = "img/rock.svg";
         } else {
-            pick = "img/";
+            pick = "img/paper.svg";
         }
         // sets the opponent's image for the generated pick
         document.getElementById('oppResult').src = pick;
         // comparison logic
-        if (pick == "img/") {
+        if (pick == "img/scissors.svg") {
             document.getElementById('result').innerHTML = "It's a Tie";
-        } else if (pick == "img/") {
+        } else if (pick == "img/rock.svg") {
             document.getElementById('result').innerHTML = "You Lose";
         } else {
             document.getElementById('result').innerHTML = "You Win!";
