@@ -45,7 +45,7 @@ img {
     height: 30%;
 }
 .rock, .paper, .scissors {
-    width: 95%; 
+    width: auto;
     height: auto;
     margin: 1rem 0;
     display: flex;
@@ -65,7 +65,7 @@ img {
 }
 .instruction-box {
     margin: 1rem; 
-    border: 4px #e00101;
+    border: 4px #d64242;
     border-style: dashed;
     background-color: #F1F1F1;
     text-align: center;
@@ -94,4 +94,8 @@ img {
 }
 .btn:hover {
     opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+    main {grid-template-columns: 1fr;}
+    main img {transform:scale(.9);}
 }
