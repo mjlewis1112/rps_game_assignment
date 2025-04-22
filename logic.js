@@ -1,3 +1,11 @@
+let wins = 0;
+let losses = 0;
+let gamesPlayed; 
+let ties = gamesPlayed - (wins + losses);
+
+winsOutput = document.getElementById("win");
+lossesOutput = document.getElementById("losses");
+
 // called by body onload, sets initial image for opponent
 function initPick() {
     let init = "img/question.svg";
@@ -24,7 +32,9 @@ function rockPick() {
             document.getElementById('result').innerHTML = "You Lose :(";
         } else {
             document.getElementById('result').innerHTML = "You Win!";
+            wins++;
         }
+        winsOutput.innerText = wins;
     }
     // runs the function
     genPick();
