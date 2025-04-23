@@ -29,12 +29,13 @@ function rockPick() {
         if (pick == "img/rock.svg") {
             document.getElementById('result').innerHTML = "It's a Tie";
         } else if (pick == "img/paper.svg") {
-            document.getElementById('result').innerHTML = "You Lose :(";
+            document.getElementById('result').innerHTML = "You Lose :("; losses++;
         } else {
             document.getElementById('result').innerHTML = "You Win!";
             wins++;
         }
         winsOutput.innerText = wins;
+        lossesOutput.innerText = losses;
     }
     // runs the function
     genPick();
@@ -57,10 +58,12 @@ function paperPick() {
         if (pick == "img/paper.svg") {
             document.getElementById('result').innerHTML = "It's a Tie";
         } else if (pick == "img/scissors.svg") {
-            document.getElementById('result').innerHTML = "You Lose :(";
+            document.getElementById('result').innerHTML = "You Lose :("; losses++;
         } else {
-            document.getElementById('result').innerHTML = "You Win!";
+            document.getElementById('result').innerHTML = "You Win!"; wins++;
         }
+        winsOutput.innerText = wins;
+        lossesOutput.innerText = losses;
     }
     // runs the function
     genPick();
@@ -83,10 +86,12 @@ function scissorsPick() {
         if (pick == "img/scissors.svg") {
             document.getElementById('result').innerHTML = "It's a Tie";
         } else if (pick == "img/rock.svg") {
-            document.getElementById('result').innerHTML = "You Lose :(";
+            document.getElementById('result').innerHTML = "You Lose :("; losses++;
         } else {
-            document.getElementById('result').innerHTML = "You Win!";
+            document.getElementById('result').innerHTML = "You Win!"; wins++;
         }
+        winsOutput.innerText = wins;
+        lossesOutput.innerText = losses;
     }
     // runs the function
     genPick();
